@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F431BC41CA29E9800468C60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F431BC31CA29E9800468C60 /* AppDelegate.swift */; };
-		2F431BC61CA29E9800468C60 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 2F431BC51CA29E9800468C60 /* GameScene.sks */; };
 		2F431BC81CA29E9800468C60 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F431BC71CA29E9800468C60 /* GameScene.swift */; };
 		2F431BCA1CA29E9800468C60 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F431BC91CA29E9800468C60 /* GameViewController.swift */; };
 		2F431BCD1CA29E9800468C60 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F431BCB1CA29E9800468C60 /* Main.storyboard */; };
@@ -16,6 +15,12 @@
 		2F431BD21CA29E9800468C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F431BD01CA29E9800468C60 /* LaunchScreen.storyboard */; };
 		2F431BDD1CA29E9800468C60 /* Air_HockeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F431BDC1CA29E9800468C60 /* Air_HockeyTests.swift */; };
 		2F431BE81CA29E9800468C60 /* Air_HockeyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F431BE71CA29E9800468C60 /* Air_HockeyUITests.swift */; };
+		2F431BF61CA29EE800468C60 /* Mallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F431BF51CA29EE800468C60 /* Mallet.swift */; };
+		2FDA03611CD6838D0098C204 /* MultiPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDA03601CD6838D0098C204 /* MultiPlayer.swift */; };
+		2FDA03631CD694FA0098C204 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDA03621CD694FA0098C204 /* StartScene.swift */; };
+		2FDA03651CD699F30098C204 /* Player1Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDA03641CD699F30098C204 /* Player1Win.swift */; };
+		2FDA03671CD69CF20098C204 /* Player2Win.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDA03661CD69CF20098C204 /* Player2Win.swift */; };
+		2FDC8DD61CD8858A0057017C /* MyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC8DD51CD8858A0057017C /* MyUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +43,6 @@
 /* Begin PBXFileReference section */
 		2F431BC01CA29E9800468C60 /* Air Hockey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Air Hockey.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F431BC31CA29E9800468C60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2F431BC51CA29E9800468C60 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
 		2F431BC71CA29E9800468C60 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		2F431BC91CA29E9800468C60 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		2F431BCC1CA29E9800468C60 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,6 +55,12 @@
 		2F431BE31CA29E9800468C60 /* Air HockeyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Air HockeyUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F431BE71CA29E9800468C60 /* Air_HockeyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Air_HockeyUITests.swift; sourceTree = "<group>"; };
 		2F431BE91CA29E9800468C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2F431BF51CA29EE800468C60 /* Mallet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mallet.swift; sourceTree = "<group>"; };
+		2FDA03601CD6838D0098C204 /* MultiPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiPlayer.swift; sourceTree = "<group>"; };
+		2FDA03621CD694FA0098C204 /* StartScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		2FDA03641CD699F30098C204 /* Player1Win.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player1Win.swift; sourceTree = "<group>"; };
+		2FDA03661CD69CF20098C204 /* Player2Win.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player2Win.swift; sourceTree = "<group>"; };
+		2FDC8DD51CD8858A0057017C /* MyUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +111,15 @@
 		2F431BC21CA29E9800468C60 /* Air Hockey */ = {
 			isa = PBXGroup;
 			children = (
+				2FDA03681CD69D210098C204 /* Scenes */,
 				2F431BC31CA29E9800468C60 /* AppDelegate.swift */,
-				2F431BC51CA29E9800468C60 /* GameScene.sks */,
-				2F431BC71CA29E9800468C60 /* GameScene.swift */,
+				2F431BF51CA29EE800468C60 /* Mallet.swift */,
 				2F431BC91CA29E9800468C60 /* GameViewController.swift */,
 				2F431BCB1CA29E9800468C60 /* Main.storyboard */,
 				2F431BCE1CA29E9800468C60 /* Assets.xcassets */,
 				2F431BD01CA29E9800468C60 /* LaunchScreen.storyboard */,
 				2F431BD31CA29E9800468C60 /* Info.plist */,
+				2FDC8DD51CD8858A0057017C /* MyUtils.swift */,
 			);
 			path = "Air Hockey";
 			sourceTree = "<group>";
@@ -129,6 +140,18 @@
 				2F431BE91CA29E9800468C60 /* Info.plist */,
 			);
 			path = "Air HockeyUITests";
+			sourceTree = "<group>";
+		};
+		2FDA03681CD69D210098C204 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2FDA03621CD694FA0098C204 /* StartScene.swift */,
+				2F431BC71CA29E9800468C60 /* GameScene.swift */,
+				2FDA03601CD6838D0098C204 /* MultiPlayer.swift */,
+				2FDA03641CD699F30098C204 /* Player1Win.swift */,
+				2FDA03661CD69CF20098C204 /* Player2Win.swift */,
+			);
+			name = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +221,7 @@
 				TargetAttributes = {
 					2F431BBF1CA29E9800468C60 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = UW7D9DM39Y;
 					};
 					2F431BD71CA29E9800468C60 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -234,7 +258,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F431BC61CA29E9800468C60 /* GameScene.sks in Resources */,
 				2F431BD21CA29E9800468C60 /* LaunchScreen.storyboard in Resources */,
 				2F431BCF1CA29E9800468C60 /* Assets.xcassets in Resources */,
 				2F431BCD1CA29E9800468C60 /* Main.storyboard in Resources */,
@@ -262,8 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FDA03671CD69CF20098C204 /* Player2Win.swift in Sources */,
+				2FDA03611CD6838D0098C204 /* MultiPlayer.swift in Sources */,
+				2FDA03631CD694FA0098C204 /* StartScene.swift in Sources */,
 				2F431BC81CA29E9800468C60 /* GameScene.swift in Sources */,
+				2FDC8DD61CD8858A0057017C /* MyUtils.swift in Sources */,
 				2F431BCA1CA29E9800468C60 /* GameViewController.swift in Sources */,
+				2F431BF61CA29EE800468C60 /* Mallet.swift in Sources */,
+				2FDA03651CD699F30098C204 /* Player1Win.swift in Sources */,
 				2F431BC41CA29E9800468C60 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,10 +435,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Air Hockey/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Air-Hockey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -417,10 +449,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Air Hockey/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Personal.Air-Hockey";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -493,6 +528,7 @@
 				2F431BEE1CA29E9800468C60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F431BEF1CA29E9800468C60 /* Build configuration list for PBXNativeTarget "Air HockeyTests" */ = {
 			isa = XCConfigurationList;
@@ -501,6 +537,7 @@
 				2F431BF11CA29E9800468C60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2F431BF21CA29E9800468C60 /* Build configuration list for PBXNativeTarget "Air HockeyUITests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +546,7 @@
 				2F431BF41CA29E9800468C60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

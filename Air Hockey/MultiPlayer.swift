@@ -1,14 +1,15 @@
 //
-//  GameScene.swift
+//  MultiPlayer.swift
 //  Air Hockey
 //
-//  Created by Vignesh Kumar Rajasekaran on 3/23/16.
-//  Copyright (c) 2016 Vignesh Kumar Rajasekaran. All rights reserved.
+//  Created by Vignesh Kumar Rajasekaran on 5/1/16.
+//  Copyright © 2016 Vignesh Kumar Rajasekaran. All rights reserved.
 //
+
 
 import SpriteKit
 
-class GameScene: SKScene, MalletDelegate {
+class MultiPlayer: SKScene, MalletDelegate {
     
     var puck : SKShapeNode?
     var southMallet : Mallet?
@@ -18,8 +19,6 @@ class GameScene: SKScene, MalletDelegate {
     var southscore = 0
     var nscore:SKLabelNode!
     var sscore:SKLabelNode!
-    var leftEdge:SKSpriteNode!
-    var rightEdge:SKSpriteNode!
     
     override init (size: CGSize ) {
         let  maxAspectRatio:CGFloat  = 16.0/9.0 // 1
@@ -34,11 +33,11 @@ class GameScene: SKScene, MalletDelegate {
     required init (coder aDecoder: NSCoder ) {
         fatalError ("init(coder:) has not been implemented" ) // 6
     }
-
+    
     
     override func didMoveToView(view: SKView) {
         
-      /*  let background = SKSpriteNode(imageNamed: "Background")
+        /*  let background = SKSpriteNode(imageNamed: "Background")
         background.position = CGPoint(x: playableRect.width/2, y: playableRect.height/2)
         background.zPosition = -1
         addChild(background)*/
@@ -83,25 +82,12 @@ class GameScene: SKScene, MalletDelegate {
                 northMallet?.position = CGPoint(x: CGRectGetMidX(frame), y: size.height * 0.75)
                 Win()
                 resetPuck()
-
+                
             }
             
         }
-        if puck?.position.y > frame.midY
-        {
-            computerAI()
-    
-        }
         
-    /*    if CGRectIntersectsRect(leftEdge.frame, (puck?.frame)!){
-              puck?.physicsBody?.applyImpulse(CGVector(dx: 20, dy: 20))
-        }*/
-        
-        if CGRectIntersectsRect((northMallet?.frame)!, (puck?.frame)!) {
-            puck?.physicsBody?.applyImpulse(CGVector(dx: 20, dy: 0))
-            
-        }
-
+        computerAI()
     }
     
     func Win()
@@ -114,7 +100,7 @@ class GameScene: SKScene, MalletDelegate {
             // 3
             view!.presentScene(winScene, transition: doorway)
         }
-        
+            
         else if southscore == 7 {
             let winScene = Player2Win(size: self.size)
             winScene.scaleMode = scaleMode
@@ -123,27 +109,90 @@ class GameScene: SKScene, MalletDelegate {
             // 3
             view!.presentScene(winScene, transition: doorway)
         }
+        
+    }
     
+    func computerAI()
+    {
+        /*     if southMallet?.speed > 0
+        {
+        
+        // move to the puck x position and split the difference
+        // between the goal
+        var offset = ((size.width/2 - 160.0) / 160.0) * 40.0;
+        var mov = CGPoint(x: size.width/2 - offset,y: size.height/2)
+        southMallet?.position = mov
+        
+        }*/
     }
     
     
     
-   func computerAI()
+    /*    - (void) computerAI
     {
-        var targetPosition = puck?.position
-        var nodePosition = northMallet?.position
-        let actionDuration = 0.1
-        var ox = (targetPosition?.x)! - (nodePosition?.x)!
-        var oy = (targetPosition?.y)! - (nodePosition?.y)!
-        let offset = CGPoint(x: ox , y: oy)
-        let direction = offset.normalized()
-        let amountToMovePerSec = direction * 150.0
-        let amountToMove = amountToMovePerSec * CGFloat(actionDuration)
-        let moveAction = SKAction.moveByX(amountToMove.x, y: amountToMove.y, duration: actionDuration)
-        northMallet!.runAction(moveAction)
-        targetPosition = northMallet?.position
-       }
+    if (state == AI_START)
+    {
+    debug.text = @"START";
+    if (paddle2.speed > 0 ||
+    (arc4random() % (100/computer)) == 1)
+    {
+    state = AI_WAIT;
+    }
+    }
+    else if (state == AI_WAIT)
+    {
+    // fix to handle computer trapping puck into the corner
+    if ([paddle1 intersects: viewPuck.frame])
+    {
+    // go into a bored state so paddle moves to
+    // random position
+    state = AI_BORED;
+    return;
+    }
+    // wait until paddle has stopped
+    if (paddle1.speed == 0)
+    {
+    debug.text = @"WAIT";
+    paddle1.maxSpeed = MAX_SPEED;
     
+    int r = arc4random() % ((4 - computer) *4);
+    // if we pick the number 1 then we go into a
+    // new state
+    if (r == 1)
+    {
+    // if puck is on our side and not moving fast
+    // go into offense. if puck is heading
+    // upwards with some speed go into defense.
+    // otherwise get bored
+    if (puck.center.y <= 240 && puck.speed < computer)
+    {
+    if (computer == 1) state = AI_OFFENSE2;
+    else state = AI_OFFENSE;
+    }
+    else if (puck.speed >= 1 && puck.dy < 0)
+    {
+    state = AI_DEFENSE;
+    }
+    else
+    {
+    state = AI_BORED;
+    }
+    }
+    }
+    }
+    else if (state == AI_OFFENSE)
+    {
+    debug.text = @"OFFENSE";
+    if (computer < 3) paddle1.maxSpeed = MAX_SPEED / 2;
+    
+    // pick a new x position between -64 and +64
+    // of puck center
+    float x = puck.center.x - 64 + (arc4random() % 129);
+    float y = puck.center.y - 64 - (arc4random() % 64);
+    [paddle1 move: CGPointMake(x,y)];
+    state = AI_OFFENSE2;
+    }
+    */
     
     
     
@@ -152,21 +201,11 @@ class GameScene: SKScene, MalletDelegate {
         if CGRectIntersectsRect(mallet.frame, puck!.frame){
             puck!.physicsBody!.applyImpulse(force)
         }
-
         
-        
-     /*   if CGRectIntersectsRect(leftEdge.frame, (puck?.frame)!){
-            puck!.physicsBody!.applyImpulse(force)
-        }*/
-        
-        if CGRectIntersectsRect(rightEdge.frame, puck!.frame){
-            puck!.physicsBody!.applyImpulse(force)
-        }
-
     }
     
     func drawCenterLine(){
-    
+        
         let centerLine = SKSpriteNode(color: UIColor.whiteColor(), size: CGSizeMake(size.width, 10))
         centerLine.position = CGPointMake(size.width/2, size.height/2)
         centerLine.colorBlendFactor = 0.5;
@@ -237,7 +276,7 @@ class GameScene: SKScene, MalletDelegate {
         
         let bumperDepth = CGFloat(20.0)
         
-        leftEdge = SKSpriteNode(color: UIColor.blueColor(), size: CGSizeMake(bumperDepth, size.height))
+        let leftEdge = SKSpriteNode(color: UIColor.blueColor(), size: CGSizeMake(bumperDepth, size.height))
         leftEdge.position = CGPointMake(frame.minX+600, frame.height/2)
         
         //setup physics for this edge
@@ -246,7 +285,7 @@ class GameScene: SKScene, MalletDelegate {
         addChild(leftEdge)
         
         //copy the left edge and position it as the right edge
-        rightEdge = leftEdge.copy() as! SKSpriteNode
+        let rightEdge = leftEdge.copy() as! SKSpriteNode
         rightEdge.position = CGPointMake(frame.maxX - 600, frame.height/2)
         addChild(rightEdge)
         
@@ -273,7 +312,7 @@ class GameScene: SKScene, MalletDelegate {
         
         let topRightEdge = bottomRightEdge.copy() as! SKSpriteNode
         topRightEdge.position = CGPointMake(size.width - endBumperWidth/2, size.height - bumperDepth/2 )
-        addChild(topRightEdge)  
+        addChild(topRightEdge)
     }
     func nodeIsOffScreen(node: SKShapeNode) -> Bool{
         return !CGRectContainsPoint(frame, node.position)
